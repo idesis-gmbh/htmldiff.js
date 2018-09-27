@@ -69,8 +69,9 @@
      * @see function diff.
      */
     var atomicTagsRegExp;
-    // Added head and style (for style tags inside the body)
-    var defaultAtomicTagsRegExp = new RegExp('^<(iframe|object|math|svg|script|video|head|style)');
+    // Added style (for style tags inside the body)
+    // @github.com/aziraphale: Had to remove 'head' as it broke things for me
+    var defaultAtomicTagsRegExp = new RegExp('^<(iframe|object|math|svg|script|video|style)');
     
     /**
      * Checks if the current word is the beginning of an atomic tag. An atomic tag is one whose
